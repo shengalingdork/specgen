@@ -14,27 +14,32 @@
                     <ul id="ticketsList{{ $release->id }}" class="list-group">
                         @foreach ($tickets as $ticket)
                             <li id="{{ $ticket->id }}" class="list-group-item">
-                                <div class="row">
-                                    <div class="col-md-8">{{ $ticket->name }}</div>
-                                    <div class="col-md-1">
-                                        <a
-                                            class="btn btn-secondary btn-sm"
-                                            href="/release/{{ $release->id }}/ticket/{{ $ticket->id }}/instructions"
-                                            role="button">
-                                            <span class="oi oi-pencil"></span>
-                                        </a>
+                                <form class="deleteTicket" action="/ticket/{{ $ticket->id }}" method="POST">
+                                    <input type="hidden" name="_token"  value="{{ csrf_token() }}">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="hidden" name="releaseID" value="{{ $release->id }}">
+                                    <div class="row">
+                                        <div class="col-md-8">{{ $ticket->name }}</div>
+                                        <div class="col-md-1">
+                                            <a
+                                                class="btn btn-secondary btn-sm"
+                                                href="/release/{{ $release->id }}/ticket/{{ $ticket->id }}/instructions"
+                                                role="button">
+                                                <span class="oi oi-grid-two-up"></span>
+                                            </a>
+                                        </div>
+                                            <div class="col-md-1">
+                                                <button id="deleteTicket" class="btn btn-danger btn-sm">
+                                                    <span class="oi oi-trash"></span>
+                                                </button>
+                                            </div>
                                     </div>
-                                    <div class="col-md-1">
-                                        <button id="deleteTicket" class="btn btn-danger btn-sm">
-                                            <span class="oi oi-trash"></span>
-                                        </button>
-                                    </div>
-                                </div>
+                                </form>
                             </li>
                         @endforeach
                         <li class="list-group-item">
-                            <form class="addTicket" method="POST">
-                                <input id="_token" type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <form class="addTicket" action="/ticket" method="POST">
+                                <input type="hidden" name="_token"  value="{{ csrf_token() }}">
                                 <input type="hidden" name="releaseID" value="{{ $release->id }}">
                                 <div class="row">
                                     <div class="col">
@@ -42,7 +47,7 @@
                                             id="inputTicket{{ $release->id }}" 
                                             type="text"
                                             class="form-control"
-                                            placeholder="Add ticket"
+                                            placeholder="Add ticket (ex. SB-1)"
                                             name="ticketName"
                                             required>
                                     </div>
@@ -65,7 +70,7 @@
                             <small>
                                 <table class="table table-sm table-light text-dark">
                                     <thead>
-                                        <tr class="">
+                                        <tr>
                                             <th>Category</th>
                                             <th>Options</th>
                                         </tr>
@@ -74,7 +79,7 @@
                                         <tr>
                                             <td>Type of Service</td>
                                             <td>
-                                                <select id="typeOfService" class="custom-select">
+                                                <select class="custom-select typeOfService">
                                                     <option value="Bug fix" {{ $release->type_of_service === 'Bug fix' ? 'selected' : '' }}>
                                                         Bug fix
                                                     </option>
@@ -96,7 +101,7 @@
                                         <tr>
                                             <td>Downtime Requirement</td>
                                             <td>
-                                                <select id="downtimeReq" class="custom-select">
+                                                <select class="custom-select downtimeReq">
                                                     <option value="No" {{ $release->downtime_req === 'No' ? 'selected' : '' }}>No</option>
                                                     <option value="Yes, less than 30 min" {{ $release->downtime_req === 'Yes, less than 30 min' ? 'selected' : '' }}>Yes, less than 30 min</option>
                                                     <option value="Yes, more than 30 min" {{ $release->downtime_req === 'Yes, more than 30 min' ? 'selected' : '' }}>Yes, more than 30 min</option>
@@ -106,7 +111,7 @@
                                         <tr>
                                             <td>Within Business Hours</td>
                                             <td>
-                                                <select id="businessHours" class="custom-select">
+                                                <select class="custom-select businessHours">
                                                     <option value="No" {{ $release->business_hours === 'No' ? 'selected' : '' }}>No</option>
                                                     <option value="Yes" {{ $release->business_hours === 'Yes' ? 'selected' : '' }}>Yes</option>
                                                 </select>

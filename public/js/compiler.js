@@ -22,84 +22,6 @@ $('a.navigation').on('click', function () {
     }
 })
 
-$('.addTicket').submit( function(e) {
-    e.preventDefault();
-    $.ajax({
-        url: '/ticket',
-        type: 'POST',
-        data: $(this).serialize(),
-        dataType: 'json',
-        success: function(response){
-            $('#inputTicket' + response.releaseID).val('');
-            if ($('#ticketsList' + response.releaseID + ' li:last').prev().length==0) {
-                $('#ticketsList' + response.releaseID + ' li:last').before(
-                    '<li id="'+response.id+'" class="list-group-item">'+
-                        '<div class="row">'+
-                            '<div class="col-md-8">'+response.name+'</div>'+
-                            '<div class="col-md-1">' +
-                                '<a ' +
-                                    'class="btn btn-secondary btn-sm"' +
-                                    'href="/release/' + response.releaseID + '/ticket/' + response.id + '/instructions"' +
-                                    'role="button">' +
-                                    '<span class="oi oi-pencil"></span>' +
-                                '</a>' +
-                            '</div>' +
-                            '<div class="col-md-1">'+
-                                '<button id="deleteTicket" class="btn btn-danger btn-sm">'+
-                                    '<span class="oi oi-trash"></span>'+
-                                '</button>'+
-                            '</div>'+
-                        '</div>'+
-                    '</li>'
-                );
-            } else {
-                $('#ticketsList' + response.releaseID + ' li:last').prev().after(
-                    '<li id="'+response.id+'" class="list-group-item">'+
-                        '<div class="row">'+
-                            '<div class="col-md-8">'+response.name+'</div>'+
-                            '<div class="col-md-1">' +
-                                '<a ' +
-                                    'class="btn btn-secondary btn-sm"' +
-                                    'href="/release/' + response.releaseID + '/ticket/' + response.id + '/instructions"' +
-                                    'role="button">' +
-                                    '<span class="oi oi-pencil"></span>' +
-                                '</a>' +
-                            '</div>' +
-                            '<div class="col-md-1">'+
-                                '<button id="deleteTicket" class="btn btn-danger btn-sm">'+
-                                    '<span class="oi oi-trash"></span>'+
-                                '</button>'+
-                            '</div>'+
-                        '</div>'+
-                    '</li>'
-                );
-            }
-        },
-        error: function(response){
-            console.log('error adding environment '+response.name);
-        }
-    });
-});
-
-$(document).on('click', '#deleteTicket', function() {
-    var id = $(this).parents('.list-group-item:first').attr('id');
-    var releaseTicketList = $(this).parents('.list-group').attr('id')
-    var index = $('#' + releaseTicketList).find('.list-group-item').index($('#' + releaseTicketList).find('#'+id+'.list-group-item'));
-    $.ajax({
-        url: '/ticket/'+ id,
-        type: 'DELETE',
-        data: $('#_token').serialize(),
-        dataType: 'json',
-        success: function(){
-            console.log('successfully deleted ticket');
-        },
-        error: function(){
-            console.log('error deleting ticket');
-        }
-    });
-    $('#' + releaseTicketList).find('.list-group-item').eq(index).remove();
-});
-
 $(document).on('click', '#editReleaseButton', function() {
     var releaseID = $(this).parents('.release-content').attr('id');
     $('#editReleaseModal').find('form').attr('action', '/release/'+releaseID);
@@ -139,6 +61,7 @@ function saveRiskAndAssessment(field, value, releaseID) {
         data: data,
         success: function() {
             console.log('success saving risk and assessment');
+            window.location.replace('/compiler/'+ releaseID);
         },
         error: function() {
             console.log('error saving risk and assessment');
@@ -146,18 +69,17 @@ function saveRiskAndAssessment(field, value, releaseID) {
     });
 }
 
-$('#typeOfService').change(function() {
+$('.typeOfService').change(function() {
     var releaseID = $(this).parents('.release-content').attr('id');
     saveRiskAndAssessment('typeOfService', this.value, releaseID);
 });
 
-$('#downtimeReq').change(function() {
+$('.downtimeReq').change(function() {
     var releaseID = $(this).parents('.release-content').attr('id');
     saveRiskAndAssessment('downtimeReq', this.value, releaseID);
 });
 
-$('#businessHours').change(function() {
+$('.businessHours').change(function() {
     var releaseID = $(this).parents('.release-content').attr('id');
     saveRiskAndAssessment('businessHours', this.value, releaseID);
 });
-

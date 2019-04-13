@@ -20,7 +20,7 @@
                 @endforeach
                 <li class="list-group-item">
                     <form class="addEnvironment" method="POST">
-                        <input id="_token" type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="_token"  value="{{ csrf_token() }}">
                         <div class="row">
                             <div class="col">
                                 <input type="text" class="form-control" placeholder="Add environment" name="environment" id="inputENV" required>
