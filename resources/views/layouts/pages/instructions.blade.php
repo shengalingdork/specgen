@@ -16,7 +16,7 @@
                 <input type="hidden" name="_token"  value="{{ csrf_token() }}">
                 <input type="hidden" name="_method" value="PUT">
                 <h2>
-                {{ $ticket->name }}
+                {{ $ticket->code }}
                 @if ($ticket->description)
                     <span id="ticketTitle">{{ $ticket->description }}</span>
                 @else

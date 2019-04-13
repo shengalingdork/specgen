@@ -19,7 +19,7 @@
                                     <input type="hidden" name="_method" value="DELETE">
                                     <input type="hidden" name="releaseID" value="{{ $release->id }}">
                                     <div class="row">
-                                        <div class="col-md-8">{{ $ticket->name }}</div>
+                                        <div class="col-md-8">{{ $ticket->code }}</div>
                                         <div class="col-md-1">
                                             <a
                                                 class="btn btn-secondary btn-sm"

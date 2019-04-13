@@ -25,7 +25,7 @@ class TicketsController extends Controller
     public function store(Request $request)
     {
         $id = Ticket::create([
-            'name' => $request->ticketName,
+            'code' => $request->ticketCode,
             'description' => $request->ticketDescription || '',
             'release_id' => $request->releaseID
         ])->id;
