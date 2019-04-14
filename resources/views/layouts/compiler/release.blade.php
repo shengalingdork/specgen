@@ -48,7 +48,7 @@
                                             type="text"
                                             class="form-control"
                                             placeholder="Add ticket (ex. SB-1)"
-                                            name="ticketName"
+                                            name="ticketCode"
                                             required>
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@
                             </button>
                             @if ($tickets->isNotEmpty())
                             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#copyToNotesModal{{$release->id}}">
-                                <span class="oi oi-clipboard"></span> Copy To Notes
+                                <span class="oi oi-clipboard"></span> Generate Note
                             </button>
                             @endif
                         </div>
