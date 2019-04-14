@@ -25,21 +25,38 @@ class TicketsController extends Controller
     public function store(Request $request)
     {
         $id = Ticket::create([
-            'name' => $request->ticketName,
+            'code' => $request->ticketCode,
+            'description' => $request->ticketDescription || '',
             'release_id' => $request->releaseID
         ])->id;
 
-        return response()->json([
-            'name' => $request->ticketName,
-            'id' => $id,
-            'releaseID' => $request->releaseID
-        ]);
+        return redirect()->route('getCompilerForSpecificRelease', ['releaseID' => $request->releaseID]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $ticket = Ticket::findOrFail($id);
+
+        $ticket->description = $request->ticketDescription;
+
+        $ticket->save();
+
+        return redirect()->route(
+            'getInstructionsByReleaseAndTicket', 
+            [
+                'releaseID' => $ticket->release_id ,
+                'ticketID' => $ticket->id
+            ]
+        );
     }
 
     public function destroy($id)
     {
+        $ticket = Ticket::find($id);
+        
         Ticket::destroy($id);
-        return response()->json(['id' => $id]);
+
+        return redirect()->route('getCompilerForSpecificRelease', ['releaseID' => $ticket->release_id]);
     }
 
     public function getTicketsPerRelease()

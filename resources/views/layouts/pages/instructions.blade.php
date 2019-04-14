@@ -12,12 +12,29 @@
                     <span class="oi oi-arrow-thick-left"></span> 
                 </a>
             </div>
-            <h2>{{ $ticket->name }} Instructions ({{ $project->name }}-{{ $release->name }})</h2>
+            <form action="/ticket/{{ $ticket->id }}" class="form-inline" method="POST">
+                <input type="hidden" name="_token"  value="{{ csrf_token() }}">
+                <input type="hidden" name="_method" value="PUT">
+                <h2>
+                {{ $ticket->code }}
+                @if ($ticket->description)
+                    <span id="ticketTitle">{{ $ticket->description }}</span>
+                @else
+                <input
+                    id="ticketDescription"
+                    name="ticketDescription"
+                    class="form-control form-control-lg"
+                    style="width:500px"
+                    type="text"
+                    placeholder="Add ticket title">
+                @endif
+                Instructions ({{ $project->name }}-{{ $release->name }})</h2>
+            </form>
         </div>
     </div>
     <div class="row mt-3">
         <form action="/instruction" class="container-fluid addInstruction" method="POST" >
-            <input id="_token" type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="_token"  value="{{ csrf_token() }}">
             <input id="releaseID" type="hidden" name="releaseID" value="{{ $release->id }}">
             <input id="ticketID" type="hidden" name="ticketID" value="{{ $ticket->id }}">
             <table class="table table-sm table-striped">

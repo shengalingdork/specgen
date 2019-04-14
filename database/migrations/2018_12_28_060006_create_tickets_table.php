@@ -15,7 +15,8 @@ class CreateTicketsTable extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name'); // ANZGO-0000
+            $table->string('code');
+            $table->string('description')->nullable();
             $table->unsignedInteger('release_id');
             $table->foreign('release_id')
                   ->references('id')->on('releases')

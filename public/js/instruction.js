@@ -31,6 +31,18 @@ function enableInstructionForm() {
     $('#instructionForm').find('#addInstructionButton').prop('disabled', false);
 }
 
+$('#ticketTitle').on('click', function() {
+    var ticketTitle = $(this).text();
+    $(this).replaceWith(
+        '<input ' +
+        'id="ticketDescription" ' +
+        'name="ticketDescription" ' +
+        'class="form-control form-control-lg" ' +
+        'type="text" ' +
+        'value="' + ticketTitle + '">'
+    );
+});
+
 $('#supportTeamID').on('change', toggleDBAttributes);
 
 $(document).on('click', '#editInstructionButton', function() {

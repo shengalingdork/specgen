@@ -20,7 +20,7 @@
                 @endforeach
                 <li class="list-group-item">
                     <form class="addDeveloper" method="POST">
-                        <input id="_token" type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="_token"  value="{{ csrf_token() }}">
                         <div class="row">
                             <div class="col">
                                 <input type="text" class="form-control" placeholder="Add developer" name="teammate" id="inputDEV" required>
@@ -54,7 +54,7 @@
                 @endforeach
                 <li class="list-group-item">
                     <form class="addTester" method="POST">
-                        <input id="_token" type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="_token"  value="{{ csrf_token() }}">
                         <div class="row">
                             <div class="col">
                                 <input type="text" class="form-control" placeholder="Add tester" name="teammate" id="inputQA" required>

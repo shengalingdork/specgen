@@ -597,7 +597,9 @@
                 &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 261pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="text-align: center; line-height: normal; margin-bottom: 0pt;" align="center"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt;"&gt;
-                            {{ collect($tickets)->pluck('name')->implode('<br>') }}
+                            @foreach($tickets as $ticket)
+                                {{ $ticket->code }} {{ $ticket->description }} &lt;br/&gt;
+                            @endforeach
                             &lt;o:p&gt;&lt;/o:p&gt;
                         &lt;/span&gt;
                     &lt;/p&gt;
@@ -938,7 +940,7 @@
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt;"&gt;
                             @foreach ($tickets as $ticket)
-                                &lt;b&gt;{{ $ticket->name }}&lt;/b&gt;&lt;br&gt;
+                                &lt;b&gt;{{ $ticket->code }}&lt;/b&gt;&lt;br&gt;
                                 @foreach ($instructions->where('ticket_id', $ticket->id) as $instruction)
                                     ({{ $environments[$instruction->environment_id]->name }}) For {{ $supportTeams[$instruction->support_team_id]->name }} Team:&lt;br&gt;
                                     {{ $instruction->instruction }}&lt;br&gt;

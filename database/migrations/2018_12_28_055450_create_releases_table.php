@@ -15,7 +15,7 @@ class CreateReleasesTable extends Migration
     {
         Schema::create('releases', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name'); // project-00.00.00* Point Release
+            $table->string('name');
             $table->unsignedInteger('working_group_id');
             $table->unsignedInteger('project_id');
             $table->dateTime('start_deployment');
