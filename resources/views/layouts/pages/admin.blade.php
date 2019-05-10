@@ -23,6 +23,7 @@
       </li>
     </ul>
     <div id="myTabContent" class="tab-content">
+      <input type="hidden" id="_token" name="_token"  value="{{ csrf_token() }}">
       <div class="tab-pane fade show active" id="projects">
         @include('layouts.admin.projects')
       </div>
