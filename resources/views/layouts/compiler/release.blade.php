@@ -15,7 +15,7 @@
                         @foreach ($tickets as $ticket)
                             <li id="{{ $ticket->id }}" class="list-group-item">
                                 <form class="deleteTicket" action="/ticket/{{ $ticket->id }}" method="POST">
-                                    <input type="hidden" name="_token"  value="{{ csrf_token() }}">
+                                    <input type="hidden" id="_token" name="_token"  value="{{ csrf_token() }}">
                                     <input type="hidden" name="_method" value="DELETE">
                                     <input type="hidden" name="releaseID" value="{{ $release->id }}">
                                     <div class="row">
@@ -83,8 +83,8 @@
                                                     <option value="Bug fix" {{ $release->type_of_service === 'Bug fix' ? 'selected' : '' }}>
                                                         Bug fix
                                                     </option>
-                                                    <option value="Enhancement" {{ $release->type_of_service === 'Enhancement' ? 'selected' : '' }}>
-                                                        Enhancement
+                                                    <option value="Enhancements" {{ $release->type_of_service === 'Enhancements' ? 'selected' : '' }}>
+                                                        Enhancements
                                                     </option>
                                                     <option value="New service" {{ $release->type_of_service === 'New service' ? 'selected' : '' }}>
                                                         New service
@@ -103,8 +103,7 @@
                                             <td>
                                                 <select class="custom-select downtimeReq">
                                                     <option value="No" {{ $release->downtime_req === 'No' ? 'selected' : '' }}>No</option>
-                                                    <option value="Yes, less than 30 min" {{ $release->downtime_req === 'Yes, less than 30 min' ? 'selected' : '' }}>Yes, less than 30 min</option>
-                                                    <option value="Yes, more than 30 min" {{ $release->downtime_req === 'Yes, more than 30 min' ? 'selected' : '' }}>Yes, more than 30 min</option>
+                                                    <option value="Yes" {{ $release->downtime_req === 'Yes' ? 'selected' : '' }}>Yes</option>
                                                 </select>
                                             </td>
                                         </tr>
