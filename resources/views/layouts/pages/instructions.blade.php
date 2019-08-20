@@ -12,6 +12,14 @@
                     <span class="oi oi-arrow-thick-left"></span> 
                 </a>
             </div>
+            <div class="float-right">
+                <a
+                    id="addInstructionButton"
+                    class="btn btn-primary text-light"
+                    role="button">
+                    <span class="oi oi-plus"> Add Instruction</span>
+                </a>
+            </div>
             <form action="/ticket/{{ $ticket->id }}" class="form-inline" method="POST">
                 <input type="hidden" name="_token"  value="{{ csrf_token() }}">
                 <input type="hidden" name="_method" value="PUT">
@@ -37,7 +45,7 @@
             <input type="hidden" name="_token"  value="{{ csrf_token() }}">
             <input id="releaseID" type="hidden" name="releaseID" value="{{ $release->id }}">
             <input id="ticketID" type="hidden" name="ticketID" value="{{ $ticket->id }}">
-            <table class="table table-sm table-striped">
+            <table class="table table-sm table-striped" style="border:1px solid #dee2e6">
                 <thead class="table-primary text-center">
                     <tr>
                         <th class="align-middle" style="width:10%">Support Team</th>
@@ -94,7 +102,7 @@
                         </tr>
                         @endforeach
                     @endif
-                    <tr id="instructionForm" class="table-dark">
+                    <tr id="instructionForm" class="table-dark" style="display:none">
                         <td class="align-middle">
                             <select class="custom-select form-control-sm" id="supportTeamID" name="supportTeamID" required>
                                 <option selected value="">Pick One</option>
@@ -122,8 +130,8 @@
                             </fieldset>
                         </td>
                         <td class="align-middle text-center">
-                            <button id="addInstructionButton" type="submit" class="btn btn-primary btn-sm">
-                                <span class="oi oi-plus"></span>
+                            <button id="addInstructionButton" type="submit" class="btn btn-info btn-sm">
+                                <span class="oi oi-check"></span>
                             </button>
                         </td>
                     </tr>
