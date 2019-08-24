@@ -17,6 +17,8 @@ class CompilerController extends Controller
         $latestRelease = $releasesController->getLatest();
         $releaseListByProject = $releasesController->getReleaseListByProject();
         $releaseListByWorkingGroup = $releasesController->getReleaseListByWorkingGroup();
+        $projectListOfReleases = $releasesController->getProjectListOfReleases();
+        $workingGroupListOfReleases = $releasesController->getWorkingGroupListOfReleases();
         $releases = $releasesController->index();
 
         $projectController = new ProjectsController();
@@ -49,6 +51,8 @@ class CompilerController extends Controller
                 'releases',
                 'releaseListByProject',
                 'releaseListByWorkingGroup',
+                'projectListOfReleases',
+                'workingGroupListOfReleases',
                 'projects',
                 'workingGroups',
                 'supportTeams',
@@ -73,6 +77,8 @@ class CompilerController extends Controller
 
         $releaseListByProject = $releasesController->getReleaseListByProject();
         $releaseListByWorkingGroup = $releasesController->getReleaseListByWorkingGroup();
+        $projectListOfReleases = $releasesController->getProjectListOfReleases();
+        $workingGroupListOfReleases = $releasesController->getWorkingGroupListOfReleases();
         $releases = $releasesController->index();
 
         $projectController = new ProjectsController();
@@ -105,6 +111,8 @@ class CompilerController extends Controller
                 'releases',
                 'releaseListByProject',
                 'releaseListByWorkingGroup',
+                'projectListOfReleases',
+                'workingGroupListOfReleases',
                 'projects',
                 'workingGroups',
                 'supportTeams',

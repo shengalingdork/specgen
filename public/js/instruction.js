@@ -43,6 +43,10 @@ $('#ticketTitle').on('click', function() {
     );
 });
 
+$('#addInstructionButton').on('click', function() {
+    $('#instructionForm').show();
+})
+
 $('#supportTeamID').on('change', toggleDBAttributes);
 
 $(document).on('click', '#editInstructionButton', function() {

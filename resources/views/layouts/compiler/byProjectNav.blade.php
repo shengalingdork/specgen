@@ -1,16 +1,16 @@
 <br> 
 <div class="nav flex-column nav-tabs" role="tablist" aria-orientation="vertical" style="padding-bottom:5px">
-    @foreach ($projects as $project)
+    @foreach ($projectListOfReleases as $projectOfRelease)
 
     @php
         if (empty($specificRelease)) {
-            $projectActiveFlag = $latestRelease->project_id === $project->id ? 'open' : 'close';
-            $projectIconFlag = $latestRelease->project_id === $project->id ? 'bottom' : 'right';
-            $projectActiveFlag2 = $latestRelease->project_id === $project->id ? 'show' : '';
+            $projectActiveFlag = $latestRelease->project_id === $projectOfRelease ? 'open' : 'close';
+            $projectIconFlag = $latestRelease->project_id === $projectOfRelease ? 'bottom' : 'right';
+            $projectActiveFlag2 = $latestRelease->project_id === $projectOfRelease ? 'show' : '';
         } else {
-            $projectActiveFlag = $specificRelease->project_id === $project->id ? 'open' : 'close';
-            $projectIconFlag = $specificRelease->project_id === $project->id ? 'bottom' : 'right';
-            $projectActiveFlag2 = $specificRelease->project_id === $project->id ? 'show' : '';
+            $projectActiveFlag = $specificRelease->project_id === $projectOfRelease ? 'open' : 'close';
+            $projectIconFlag = $specificRelease->project_id === $projectOfRelease ? 'bottom' : 'right';
+            $projectActiveFlag2 = $specificRelease->project_id === $projectOfRelease ? 'show' : '';
         }
     @endphp
 
@@ -21,20 +21,20 @@
                     class="btn btn-link btn-block navigation collapsible-{{ $projectActiveFlag }}"
                     style="text-align:left"
                     data-toggle="collapse"
-                    href="#project{{ $project->id }}"
+                    href="#project{{ $projectOfRelease }}"
                     role="button"
                     aria-expanded="false">
-                    <span class="oi oi-chevron-{{ $projectIconFlag }}"></span> {{ $project->name }}
+                    <span class="oi oi-chevron-{{ $projectIconFlag }}"></span> {{ $projects[$projectOfRelease]->name }}
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="collapse {{ $projectActiveFlag2 }}" id="project{{ $project->id }}">
+    <div class="collapse {{ $projectActiveFlag2 }}" id="project{{ $projectOfRelease }}">
         <div class="container">
             <div class="row">
                 <div class="col-10 offset-md-1">
-                    @foreach ($releaseListByProject[$project->id] as $release)
+                    @foreach ($releaseListByProject[$projectOfRelease] as $release)
 
                     @php
                         if (empty($specificRelease)) {

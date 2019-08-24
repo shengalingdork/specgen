@@ -264,7 +264,7 @@
                 &lt;td style="border-width: medium 1pt 1pt medium; border-color: currentColor windowtext windowtext currentColor; padding: 0in 5.4pt; width: 171pt; height: 17.65pt; border-top-style: none; border-left-style: none;" width="228" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-horizontal: page; mso-element-left: center; mso-height-rule: exactly; mso-element-top: -10.5pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 9pt;"&gt;
-                            If yes, provide timing
+                            {{ $release->downtime_req === 'Yes' ? '&lt;b&gt;If yes, provide timing&lt;/b&gt;' : 'If yes, provide timing' }}
                             &lt;o:p&gt;&lt;/o:p&gt;
                         &lt;/span&gt;
                     &lt;/p&gt;
@@ -346,7 +346,7 @@
                 &lt;td style="border-width: medium 1pt 1pt medium; border-color: currentColor windowtext windowtext currentColor; padding: 0in 5.4pt; width: 171pt; height: 17.65pt; border-top-style: none; border-left-style: none;" width="228" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-horizontal: page; mso-element-left: center; mso-height-rule: exactly; mso-element-top: -10.5pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 9pt;"&gt;
-                            If yes, provide possible impact
+                            {{ $release->business_hours === 'Yes' ? '&lt;b&gt;If yes, provide possible impact&lt;/b&gt;' : 'If yes, provide possible impact' }}
                             &lt;o:p&gt;&lt;/o:p&gt;
                         &lt;/span&gt;
                     &lt;/p&gt;

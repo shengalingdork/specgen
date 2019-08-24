@@ -35,7 +35,10 @@ class ReleasesController extends Controller
 
         $projectIDs = Project::pluck('id');
         foreach ($projectIDs as $projectID) {
-            $releases[$projectID] = Release::where('project_id', $projectID)->get();
+            $release = Release::where('project_id', $projectID)->get();
+            if (count($release)) {
+              $releases[$projectID] = $release;
+            }
         }
 
         return $releases;
@@ -50,14 +53,27 @@ class ReleasesController extends Controller
 
         foreach ($wgIDs as $wgID) {
             foreach ($projectIDs as $projectID) {
-                $releases[$wgID][$projectID] = Release::where([
-                                                ['working_group_id', '=', $wgID],
-                                                ['project_id', '=', $projectID],
-                                                ])->get();
+                $release = Release::where([
+                    ['working_group_id', '=', $wgID],
+                    ['project_id', '=', $projectID],
+                    ])->get();
+                if (count($release)) {
+                  $releases[$wgID][$projectID] = $release;
+                }
             }
         }
 
         return $releases;
+    }
+
+    public function getProjectListOfReleases()
+    {
+      return Release::groupBy('project_id')->pluck('project_id');
+    }
+
+    public function getWorkingGroupListOfReleases()
+    {
+      return Release::groupBy('working_group_id')->pluck('working_group_id');
     }
 
     public function store(Request $request)
