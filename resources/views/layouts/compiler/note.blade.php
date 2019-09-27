@@ -943,7 +943,7 @@
                                 &lt;b&gt;{{ $ticket->code }}&lt;/b&gt;&lt;br&gt;
                                 @foreach ($instructions->where('ticket_id', $ticket->id) as $instruction)
                                     ({{ $environments[$instruction->environment_id]->name }}) For {{ $supportTeams[$instruction->support_team_id]->name }} Team:&lt;br&gt;
-                                    {{ $instruction->instruction }}&lt;br&gt;
+                                    {!! htmlspecialchars(nl2br($instruction->instruction)) !!}&lt;br&gt;
                                     &lt;br&gt;
                                 @endforeach
                             @endforeach
