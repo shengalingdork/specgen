@@ -126,7 +126,7 @@
                             <fieldset id="dbAttributes" disabled="">
                                 <input type="text" class="form-control form-control-sm" placeholder="Add code review link" id="dbCodeReviewLink" name="dbCodeReviewLink" required>
                                 <input type="text" class="form-control form-control-sm" placeholder="Add affected core tables" id="dbCoreTables" name="dbCoreTables" required>
-                                <input type="number" class="form-control form-control-sm" placeholder="Add revision number" id="dbRevisionNum" name="dbRevisionNum" required>
+                                <input type="number" class="form-control form-control-sm" placeholder="Add revision number" id="dbRevisionNum" name="dbRevisionNum" max="4294967295" required>
                             </fieldset>
                         </td>
                         <td class="align-middle text-center">
