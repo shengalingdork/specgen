@@ -549,7 +549,7 @@
                 &lt;/td&gt;
             &lt;/tr&gt;
             &lt;tr style="height: 12.75pt;"&gt;
-                &lt;td style="border-width: 1pt; border-color: windowtext; padding: 0in 5.4pt; width: 337.5pt; height: 12.75pt;" width="450" valign="middle" nowrap=""&gt;
+                &lt;td style="border-width: 1pt; border-color: windowtext; padding: 0in 5.4pt; width: 200pt; height: 12.75pt;" width="450" valign="middle" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 9pt;"&gt;
                             Server(s) where packages are to be deployed:
@@ -557,7 +557,7 @@
                         &lt;/span&gt;
                     &lt;/p&gt;
                 &lt;/td&gt;
-                &lt;td style="border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 261pt; height: 12.75pt; border-top-color: windowtext; border-bottom-color: windowtext; border-left-color: currentColor; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
+                &lt;td style="border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 400pt; height: 12.75pt; border-top-color: windowtext; border-bottom-color: windowtext; border-left-color: currentColor; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="text-align: center; line-height: normal; margin-bottom: 0pt;" align="center"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt; align="center""&gt;
                             FOR TNG PRODUCTION&lt;br&gt;
@@ -568,7 +568,7 @@
                 &lt;/td&gt;
             &lt;/tr&gt;
             &lt;tr style="height: 12.75pt;"&gt;
-                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 337.5pt; height: 12.75pt; border-top-style: none;" width="450" valign="bottom" nowrap=""&gt;
+                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 200pt; height: 12.75pt; border-top-style: none;" width="450" valign="bottom" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 9pt;"&gt;
                             Server and Credentials (where tar files should be created):
@@ -576,7 +576,7 @@
                         &lt;/span&gt;
                     &lt;/p&gt;
                 &lt;/td&gt;
-                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 261pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
+                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 400pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="text-align: center; line-height: normal; margin-bottom: 0pt;" align="center"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt;"&gt;
                             &<code>nbsp</code>;
@@ -586,7 +586,7 @@
                 &lt;/td&gt;
             &lt;/tr&gt;
             &lt;tr style="height: 12.75pt;"&gt;
-                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 337.5pt; height: 12.75pt; border-top-style: none;" width="450" valign="middle"&gt;
+                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 200pt; height: 12.75pt; border-top-style: none;" width="450" valign="middle"&gt;
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 9pt;"&gt;
                             Business ticket(s) (JIRA):
@@ -594,7 +594,7 @@
                         &lt;/span&gt;
                     &lt;/p&gt;
                 &lt;/td&gt;
-                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 261pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
+                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 400pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="text-align: center; line-height: normal; margin-bottom: 0pt;" align="center"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt;"&gt;
                             @foreach($tickets as $ticket)
@@ -606,7 +606,7 @@
                 &lt;/td&gt;
             &lt;/tr&gt;
             &lt;tr style="height: 12.75pt;"&gt;
-                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 337.5pt; height: 12.75pt; border-top-style: none;" width="450" valign="bottom"&gt;
+                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 200pt; height: 12.75pt; border-top-style: none;" width="450" valign="bottom"&gt;
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 9pt;"&gt;
                             Release Package Version Number:
@@ -614,7 +614,7 @@
                         &lt;/span&gt;
                     &lt;/p&gt;
                 &lt;/td&gt;
-                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 261pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
+                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 400pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="text-align: center; line-height: normal; margin-bottom: 0pt;" align="center"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt;"&gt;
                             {{  $project->name }}-{{ $release->name }} Point Release
@@ -624,7 +624,7 @@
                 &lt;/td&gt;
             &lt;/tr&gt;
             &lt;tr style="height: 12.75pt;"&gt;
-                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 337.5pt; height: 12.75pt; border-top-style: none;" width="450" valign="bottom"&gt;
+                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 200pt; height: 12.75pt; border-top-style: none;" width="450" valign="bottom"&gt;
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 9pt;"&gt;
                             Release Package Location (SVN):
@@ -632,7 +632,7 @@
                         &lt;/span&gt;
                     &lt;/p&gt;
                 &lt;/td&gt;
-                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 261pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
+                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 400pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="text-align: center; line-height: normal; margin-bottom: 0pt;" align="center"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt;"&gt;
                             {{  $project->repo_link }}
@@ -642,7 +642,7 @@
                 &lt;/td&gt;
             &lt;/tr&gt;
             &lt;tr style="height: 12.75pt;"&gt;
-                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 337.5pt; height: 12.75pt; border-top-style: none;" width="450" valign="bottom"&gt;
+                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 200pt; height: 12.75pt; border-top-style: none;" width="450" valign="bottom"&gt;
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 9pt;"&gt;
                             New Files (not to be included in backup script):
@@ -650,7 +650,7 @@
                         &lt;/span&gt;
                     &lt;/p&gt;
                 &lt;/td&gt;
-                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 261pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
+                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 400pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="text-align: center; line-height: normal; margin-bottom: 0pt;" align="center"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt;"&gt;
                             &<code>nbsp</code>;
@@ -660,7 +660,7 @@
                 &lt;/td&gt;
             &lt;/tr&gt;
             &lt;tr style="height: 12.75pt;"&gt;
-                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 337.5pt; height: 12.75pt; border-top-style: none;" width="450" valign="bottom"&gt;
+                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 200pt; height: 12.75pt; border-top-style: none;" width="450" valign="bottom"&gt;
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 9pt;"&gt;
                             Files to be included in the Tar file:
@@ -668,7 +668,7 @@
                         &lt;/span&gt;
                     &lt;/p&gt;
                 &lt;/td&gt;
-                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 261pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
+                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 400pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="text-align: center; line-height: normal; margin-bottom: 0pt;" align="center"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt;"&gt;
                             &<code>nbsp</code>;
@@ -678,7 +678,7 @@
                 &lt;/td&gt;
             &lt;/tr&gt;
             &lt;tr style="height: 12.75pt;"&gt;
-                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 337.5pt; height: 12.75pt; border-top-style: none;" width="450" valign="bottom"&gt;
+                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 200pt; height: 12.75pt; border-top-style: none;" width="450" valign="bottom"&gt;
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 9pt;"&gt;
                             Release Package Filename(s):
@@ -686,7 +686,7 @@
                         &lt;/span&gt;
                     &lt;/p&gt;
                 &lt;/td&gt;
-                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 261pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
+                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 400pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="text-align: center; line-height: normal; margin-bottom: 0pt;" align="center"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt;"&gt;
                             &<code>nbsp</code>;
@@ -696,7 +696,7 @@
                 &lt;/td&gt;
             &lt;/tr&gt;
             &lt;tr style="height: 12.75pt;"&gt;
-                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 337.5pt; height: 12.75pt; border-top-style: none;" width="450" valign="middle"&gt;
+                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 200pt; height: 12.75pt; border-top-style: none;" width="450" valign="middle"&gt;
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 9pt;"&gt;
                             Developer Support Contact:
@@ -704,7 +704,7 @@
                         &lt;/span&gt;
                     &lt;/p&gt;
                 &lt;/td&gt;
-                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 261pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
+                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 400pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="text-align: center; line-height: normal; margin-bottom: 0pt;" align="center"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt;"&gt;
                             {{ $developers->pluck('name')->implode(', ') }}
@@ -714,7 +714,7 @@
                 &lt;/td&gt;
             &lt;/tr&gt;
             &lt;tr style="height: 12.75pt;"&gt;
-                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 337.5pt; height: 12.75pt; border-top-style: none;" width="450" valign="middle"&gt;
+                &lt;td style="border-width: medium 1pt 1pt; border-color: currentColor windowtext windowtext; padding: 0in 5.4pt; width: 200pt; height: 12.75pt; border-top-style: none;" width="450" valign="middle"&gt;
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 9pt;"&gt;
                             Post Deployment Tester:
@@ -722,7 +722,7 @@
                         &lt;/span&gt;
                     &lt;/p&gt;
                 &lt;/td&gt;
-                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 261pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
+                &lt;td style="border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 400pt; height: 12.75pt; border-top-color: currentColor; border-bottom-color: windowtext; border-left-color: currentColor; border-top-style: none; border-left-style: none;" width="348" valign="bottom" nowrap=""&gt;
                     &lt;p class="MsoNormal" style="text-align: center; line-height: normal; margin-bottom: 0pt;" align="center"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt;"&gt;
                             {{ $testers->pluck('name')->implode(', ') }}
