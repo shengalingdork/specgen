@@ -940,12 +940,14 @@
                     &lt;p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;"&gt;
                         &lt;span style="font-family: Arial, sans-serif; font-size: 10pt;"&gt;
                             @foreach ($tickets as $ticket)
-                                &lt;b&gt;{{ $ticket->code }}&lt;/b&gt;&lt;br&gt;
-                                @foreach ($instructions->where('ticket_id', $ticket->id) as $instruction)
-                                    ({{ $environments[$instruction->environment_id]->name }}) For {{ $supportTeams[$instruction->support_team_id]->name }} Team:&lt;br&gt;
-                                    {!! htmlspecialchars(nl2br($instruction->instruction)) !!}&lt;br&gt;
-                                    &lt;br&gt;
-                                @endforeach
+                                @if ($instructions->where('ticket_id', $ticket->id))
+                                    &lt;b&gt;{{ $ticket->code }}&lt;/b&gt;&lt;br&gt;
+                                    @foreach ($instructions->where('ticket_id', $ticket->id) as $instruction)
+                                        ({{ $environments[$instruction->environment_id]->name }}) For {{ $supportTeams[$instruction->support_team_id]->name }} Team:&lt;br&gt;
+                                        {!! htmlspecialchars(nl2br($instruction->instruction)) !!}&lt;br&gt;
+                                        &lt;br&gt;
+                                    @endforeach
+                                @endif
                             @endforeach
                         &lt;/span&gt;
                     &lt;/p&gt;
